@@ -1,0 +1,145 @@
+/* reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos general*/
+
+body{
+    background-color: #deb297;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+h3{
+    margin-top: 3rem;
+}
+small{
+    margin-left: 2rem;
+}
+
+.frase{
+    margin-bottom: 5rem;
+}
+.formulario{
+    margin: 10px 15% 5% 15%;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-weight:bolder;
+    color: black;
+}
+.btn-primary{
+    background-color: brown;
+    border-color: brown;
+
+}
+.btn-primary:hover{
+    background-color: #f32a07;
+    border-color:#f32a07;
+}
+nav{
+    background-color: #d17754;
+}
+.nav-link:hover{
+    background-color: #e47966;
+}
+.nav-pills {
+    --bs-nav-pills-link-active-color: #020202;
+    --bs-nav-pills-link-active-bg: #b4412c;
+}
+.fuente{
+    font-family: Copperplate, Papyrus, fantasy;
+    font-weight:bolder;
+    color: black;
+    text-align: center;
+    
+}
+.nav-link{
+    color: black;
+    
+
+}
+.nav-link:hover{
+    color: rgb(209, 16, 16);
+}
+
+/*estilos menu*/
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card{
+    background-color: rgb(223, 131, 103);
+    width: 15rem;
+    transition: all 0,3 s;
+    margin: 2rem;
+    
+}
+
+.card:hover{
+    transform: scale(1.1, 1.2);
+}
+
+
+
+/*estilo footer*/
+
+.pie{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #d17754;
+    
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;  
+}
+.logowhat{
+    margin-left: 2rem;
+}
+
+
+@media screen and (min-width:1024px){
+    .menu{
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .pie{
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+     .menu2{
+        display: grid;
+        
+        
+        grid-template-areas: 
+        "card card card"
+        "card card card";
+        justify-content: center;
+        
+    }
+    .formulario{
+        margin: 10px 15% 5% 15%;
+        font-family: Copperplate, Papyrus, fantasy;
+        font-weight:bolder;
+        color: black;
+    }
+
+    
+
+
+    
+}
+
+
