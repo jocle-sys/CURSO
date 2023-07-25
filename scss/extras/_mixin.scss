@@ -1,0 +1,11 @@
+
+/*import variables*/
+@import "extras/variables.scss";
+
+//mixin sin parametros
+
+@mixin fuente{
+    font-family: $fuente-letra;
+    font-weight: bolder;
+    color:$color-letra;
+}
