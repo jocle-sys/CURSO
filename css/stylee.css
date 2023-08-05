@@ -35,7 +35,8 @@ body {
   position: relative;
   min-height: 100vh;
   padding-bottom: 3rem;
-  /*estilos menu*/ }
+  /*estilos menu*/
+  /*centrado del mapa*/ }
   body h3 {
     margin-top: 3rem; }
   body small {
@@ -49,7 +50,8 @@ body {
     color: black; }
   body .btn-primary {
     background-color: brown;
-    border-color: brown; }
+    border-color: brown;
+    --bs-btn-active-bg: #fd0905; }
   body .btn-primary:hover {
     background-color: #f32a07;
     border-color: #f32a07; }
@@ -57,6 +59,8 @@ body {
     background-color: #d17754; }
   body .nav-link:hover {
     background-color: #e47966; }
+  body .container-fluid {
+    width: auto; }
   body .nav-pills {
     --bs-nav-pills-link-active-color: #020202;
     --bs-nav-pills-link-active-bg: #b4412c; }
@@ -81,8 +85,28 @@ body {
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem; }
+  body .subtitulo {
+    margin: 50px 0 10px 0; }
   body .card:hover {
     transform: scale(1.1, 1.2); }
+  body .card-text {
+    font-weight: bolder;
+    font-size: x-large; }
+  body .imagen-del-carrusel {
+    width: 500px;
+    margin: 0 auto; }
+  body .row {
+    justify-content: center; }
+  body .texto-carrusel {
+    margin: 25px 0px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+  body .h-carrusel {
+    margin-bottom: 5px;
+    font-size: 19px;
+    font-weight: 600; }
   @media screen and (min-width: 600px) {
     body .menu {
       display: grid;

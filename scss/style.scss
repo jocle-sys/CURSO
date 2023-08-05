@@ -39,20 +39,27 @@ body{
     .btn-primary{
         background-color: brown;
         border-color: brown;
+        --bs-btn-active-bg: #fd0905;
     }
     .btn-primary:hover{
         background-color: #f32a07;
         border-color:#f32a07;
     }
+   
     nav{
         background-color: #d17754;
     }
+    
     .nav-link:hover{
         background-color: #e47966;
+    }
+    .container-fluid{
+       width: auto ;
     }
     .nav-pills {
         --bs-nav-pills-link-active-color: #020202;
         --bs-nav-pills-link-active-bg: #b4412c;
+        
     }
     .fuente{
         @include fuente  
@@ -79,14 +86,45 @@ body{
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-    
+    .subtitulo{
+        margin: 50px 0 10px 0
+    }
     .card{
        @extend %card-estilo;      
     }
     .card:hover{
         transform: scale(1.1, 1.2);
     }
+    .card-text{
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    
+    .imagen-del-carrusel{
+        width: 500px;
+        margin: 0 auto;
+    }
+    /*centrado del mapa*/
+    .row{
+        justify-content: center;
+    }
+    
+    
+    .texto-carrusel{
+    margin: 25px 0px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
 
+    .h-carrusel{
+    margin-bottom: 5px;
+    font-size: 19px;
+    font-weight: 600;
+    }
+   
+   
 @media screen and (min-width:600px){
     
     .menu{
