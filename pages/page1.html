@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--link del css-->
+    <link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>The Coquitos..</title>
+</head>
+<body>
+    <!--LOGO-->
+    <header>
+        <div class="nav flex-column text-center">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" width="200" height="125"></a>
+            <h1 class="fuente">DE COQUITOS..</h1>
+            <h2 class="fuente">Diseño y Arte</h2>
+            <h2 class="">Artistica</h2>
+        </div>
+    </header>
+
+    <!--LISTA DE PRODUCTOS-->
+  <main >
+      <h2 class="fuente frase">Elegi la categoria que quieras...</h2>
+        <div class="menu">
+        <div>
+          <div class="card"> 
+              <a href="pages/page2.html"><img class="card-img-top " src="img/bandeja1.jpg" alt="Bandejas"></a>
+              <div class="card-body text-center ">
+                <a href="pages/page2.html" class="btn btn-primary">BANDEJAS</a>
+              </div>
+          </div>
+        </div>
+        <div >
+            <div class="card">
+                <a href="pages/page3.html"><img  class="card-img-top"src="img/baul1.jpg"  alt="baul"></a>
+              <div class="card-body text-center">
+                 <a href="pages/page3.html" class="btn btn-primary">BAULES</a>
+              </div>
+            </div>
+          </div>
+          <div >
+            <div class="card">
+                <a href="pages/page4.html"><img class="card-img-top" src="img/caja1.jpg" alt="cajas"></a>
+                <div class="card-body text-center">
+                    <a href="pages/page4.html" class="btn btn-primary">CAJAS</a>
+                </div>
+            </div>
+          </div>
+        <div >
+          <div class="card">
+            <a href="pages/page5.html"><img class="card-img-top" src="img/te1.jpg" alt="Cajas de TE" ></a>
+            <div class="card-body text-center">               
+              <a href="pages/page5.html" class="btn btn-primary">CAJAS DE TE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="fuente frase">Algunos de nuestros productos...</h3>
+      <div id="carouselExampleCaptions" class="carousel slide mi-carrusel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="pages/page4.html">
+              <img src="img/caja6.jpg" class="d-block imagen-del-carrusel" alt="cajas de flores">
+            </a>
+            <div class="texto-carrusel">
+              <p class="h-carrusel">Caja de Flores</p>
+              <p>Caja con tapa de flores en MDF de 40cm x 40cm pintada a mano </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="pages/page2.html">
+              <img src="img/bandeja5.jpg" class="d-block imagen-del-carrusel" alt="set de 4 elementos">
+            </a>
+            <div class="texto-carrusel">
+              <p class="h-carrusel">Set de 4 Elementos</p>
+              <p>Set de desayuno de 4 elementos </p>
+            </div>                
+          </div>
+          <div class="carousel-item">
+            <a href="pages/page3.html">
+              <img src="img/baul4.jpg" class="d-block imagen-del-carrusel" alt="baul floral">
+            </a>
+            <div class="texto-carrusel">
+              <p class="h-carrusel">Baul floral</p>
+              <p>Baul floral pintado a mano</p>
+            </div>                
+          </div>
+
+          <div class="carousel-indicators item-relative">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          
+        </div>
+        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+  </main>
+
+    <!--PIE DE PAGINA-->
+
+    
+        <footer>
+          <div class="pie">
+            <a href="index.html" class="text-dark ">
+              <img alt="logo" src="img/logo.png" width="30px" />
+              <span class="ms-4 h5 font-weight-bold">De Coquitos</span>
+            </a>
+            <small>&copy; Jose Maria Lopez, 2023. All rights reserved.</small>
+            <div class="logowhat">
+              <button class="btn btn-primary btn-lg btn-floating  ">
+                <i class="bi bi-whatsapp"></i>
+              </button>             
+            </div>
+          </div>
+        </footer>
+  
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
