@@ -82,7 +82,6 @@ if (elementoEncontrado !== undefined) {
      {id: 3, nombre: "PANERA", precio: 500.00},
      {id: 3, nombre: "HUEVERA", precio: 300.00},
  ];
-
  // Función para mostrar los productos en el carrito 
  function mostrarCarrito() {
      let carritoElement = document.getElementById("carrito");
@@ -147,3 +146,5 @@ if (elementoEncontrado !== undefined) {
 
  // Mostrar el carrito al cargar la página
  mostrarCarrito();
+
+ //FINAL DE LA ENTREGA
