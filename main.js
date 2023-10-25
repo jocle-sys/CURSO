@@ -26,8 +26,13 @@ for (let turno = 1; turno <= LIMITE; turno++) {
   console.log(" Turno asignado " + turno + " Cliente: " + cliente + " Vehiculo: " + vehiculo + " Modelo: " + modelo);
 } */
 
+
+
+/*
 // ENTREGA N° 2
 // EJERCICIO PARA CREAR UNA LISTA DE INVITADO QUE ES GUARADADA EN UN ARRAY
+
+
 
 let   cantidad     = prompt("INGRESE LA CANTIDAD DE INVITADOS PARA LA FIESTA"); //CANTIDAD DE INVITADOS PARA FIESTA
 const listaInvitados = []; //ARRAY DE LA FIESTA
@@ -61,7 +66,52 @@ if (elementoEncontrado !== undefined) {
 } else {
   alert (invitadobuscado + " NO ESTA INVITADO A LA FIESTA");
 }
+*/
+//ENTREGA N° 3
 
+// Obtén la lista de personas desde localStorage al cargar la página
+var personas = JSON.parse(localStorage.getItem('personas')) || [];
 
+// Función para mostrar la lista de personas en el DOM
+function mostrarPersonas() {
+    var lista = document.getElementById("lista-personas");
+    lista.innerHTML = ''; // Borra la lista antes de mostrarla nuevamente
 
+    personas.forEach(function(persona) {
+        var nuevaPersona = document.createElement("li");
+        nuevaPersona.textContent = persona.nombre;
+        lista.appendChild(nuevaPersona);
+    });
+}
+
+// Agregar una persona a la lista
+document.getElementById("agregar-persona").addEventListener("click", function() {
+    var nombre = document.getElementById("nombre").value;
+
+    if (nombre === "") {
+        alert("Por favor, ingresa un nombre.");
+        return;
+    }
+
+    personas.push({ nombre: nombre });
+
+    // Guarda la lista de personas 
+    localStorage.setItem('personas', JSON.stringify(personas));
+
+    // Muestra la lista actualizada 
+    mostrarPersonas();
+
+    // Limpia el campo de entrada
+    document.getElementById("nombre").value = "";
+});
+
+// Limpiar la lista de personas
+document.getElementById("limpiar-lista").addEventListener("click", function() {
+    localStorage.removeItem('personas');
+    personas = [];
+    mostrarPersonas();
+});
+
+// Mostrar la lista de personas al cargar la página
+mostrarPersonas();
 
