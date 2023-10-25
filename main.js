@@ -69,49 +69,81 @@ if (elementoEncontrado !== undefined) {
 */
 //ENTREGA N° 3
 
-// Obtén la lista de personas desde localStorage al cargar la página
-var personas = JSON.parse(localStorage.getItem('personas')) || [];
+ // Obtén el carrito desde localStorage al cargar la página
+ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-// Función para mostrar la lista de personas en el DOM
-function mostrarPersonas() {
-    var lista = document.getElementById("lista-personas");
-    lista.innerHTML = ''; // Borra la lista antes de mostrarla nuevamente
+ // Lista de productos disponibles 
+ let productosDisponibles = [
+     { id: 1, nombre: "CAJA DE TE", precio: 10.00 },
+     { id: 2, nombre: "BANDEJA", precio: 20.00 },
+     { id: 3, nombre: "COFRE", precio: 130.00 },
+     {id: 3, nombre: "CAMION", precio: 330.00},
+     {id: 3, nombre: "CUADRO", precio: 120.00},
+     {id: 3, nombre: "PANERA", precio: 500.00},
+     {id: 3, nombre: "HUEVERA", precio: 300.00},
+ ];
 
-    personas.forEach(function(persona) {
-        var nuevaPersona = document.createElement("li");
-        nuevaPersona.textContent = persona.nombre;
-        lista.appendChild(nuevaPersona);
-    });
-}
+ // Función para mostrar los productos en el carrito 
+ function mostrarCarrito() {
+     let carritoElement = document.getElementById("carrito");
+     let productosElement = document.getElementById("productos");
 
-// Agregar una persona a la lista
-document.getElementById("agregar-persona").addEventListener("click", function() {
-    var nombre = document.getElementById("nombre").value;
+     // Borra los elementos anteriores antes de mostrarlos nuevamente
+     carritoElement.innerHTML = '';
+     productosElement.innerHTML = '';
 
-    if (nombre === "") {
-        alert("Por favor, ingresa un nombre.");
-        return;
-    }
+     // Mostrar productos en el carrito
+     let total = 0;
+     carrito.forEach(function(item) {
+         let producto = productosDisponibles.find(function(producto) {
+             return producto.id === item.id;
+         });
 
-    personas.push({ nombre: nombre });
+         let newItem = document.createElement("li");
+         newItem.textContent = producto.nombre + " - $" + producto.precio;
+         carritoElement.appendChild(newItem);
 
-    // Guarda la lista de personas 
-    localStorage.setItem('personas', JSON.stringify(personas));
+         // Suma el precio al total
+         total += producto.precio;
+     });
 
-    // Muestra la lista actualizada 
-    mostrarPersonas();
+     // Muestra el total en el DOM
+     document.getElementById("total-precio").textContent = "$" + total.toFixed(2);
 
-    // Limpia el campo de entrada
-    document.getElementById("nombre").value = "";
-});
+     // Mostrar productos disponibles
+     productosDisponibles.forEach(function(producto) {
+         let newItem = document.createElement("li");
+         newItem.textContent = producto.nombre + " - $" + producto.precio;
 
-// Limpiar la lista de personas
-document.getElementById("limpiar-lista").addEventListener("click", function() {
-    localStorage.removeItem('personas');
-    personas = [];
-    mostrarPersonas();
-});
+         let botonAgregar = document.createElement("button");
+         botonAgregar.textContent = "Agregar al Carrito";
+         botonAgregar.addEventListener("click", function() {
+             agregarAlCarrito(producto);
+         });
 
-// Mostrar la lista de personas al cargar la página
-mostrarPersonas();
+         newItem.appendChild(botonAgregar);
+         productosElement.appendChild(newItem);
+     });
+ }
 
+ // Función para agregar un producto al carrito
+ function agregarAlCarrito(producto) {
+     carrito.push({ id: producto.id, nombre: producto.nombre, precio: producto.precio });
+
+     // Guarda el carrito en localStorage
+     localStorage.setItem('carrito', JSON.stringify(carrito));
+
+     // Muestra el carrito actualizado en el DOM
+     mostrarCarrito();
+ }
+
+ // Botón para limpiar el carrito
+ let limpiarCarritoButton = document.getElementById("limpiar-carrito");
+ limpiarCarritoButton.addEventListener("click", function() {
+     carrito = []; // Vacía el carrito
+     localStorage.removeItem('carrito'); // Elimina el carrito de localStorage
+     mostrarCarrito(); // Actualiza el DOM
+ });
+
+ // Mostrar el carrito al cargar la página
+ mostrarCarrito();
