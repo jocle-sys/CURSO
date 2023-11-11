@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!--link del css-->
-    <link rel="stylesheet" href="css/stylee.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>The Coquitos..</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <!--LOGO-->
@@ -18,49 +17,68 @@
             <a href="index.html"><img src="img/logo.png" alt="Logo" width="200" height="125"></a>
             <h1 class="fuente">DE COQUITOS..</h1>
             <h2 class="fuente">Diseño y Arte</h2>
-            <h2 class="">Artistica</h2>
+            <h2 class="fuente">Artistica</h2>
         </div>
     </header>
 
-    <!--LISTA DE PRODUCTOS-->
-  <main >
-      <h2 class="fuente frase">TERCERA ENTREGA DEL CURSO</h2>
-      <h1>Carrito de Compras</h1>
-      <ul id="carrito">
-          <!-- Aquí se mostrarán los productos en el carrito -->
-      </ul>
-      <p>Total: <span id="total-precio">$0.00</span></p>
-      <h2>Productos Disponibles</h2>
-      <ul id="productos">
-        <!-- Aquí se mostrarán los productos disponibles -->
-      </ul>
+     <!--MENU-->
+     <nav class="navbar nav-pills navbar-expand-lg ">
+        <div class="container-fluid">
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu ">
+                <li class="nav-item">
+                    <button id="todos" class="nav-link boton-categoria active fuente">TODOS LOS PRODUCTOS</button>
+                </li>
+                <li  class="nav-item">
+                    <button id="baul" class="nav-link boton-categoria fuente">BAULES</button>
+                </li>
+                <li class="nav-item">
+                  <button id="cajas" class="nav-link boton-categoria fuente"> CAJAS</button>
+              </li>
+              <li class="nav-item">
+                <button id="te" class="nav-link boton-categoria fuente"> CAJAS DE TÉ</button>
+              </li>    
+              <li class="nav-item">
+              <a class=" nav-link fuente" href="./carrito.html">
+                  <i class="bi bi-cart-fill"></i> CARRITO<span id="numerito" class="numerito">0</span>
+              </a>
+              </li>         
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <main>
+        <h2 class="titulo-principal" id="titulo-principal">PRODUCTOS</h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+            <!-- Esto se va a rellenar con JS -->
+        </div>
+      </main>
   
-      <button id="limpiar-carrito">Limpiar Carrito</button>
+
     
-            
-    
-  </main>
 
     <!--PIE DE PAGINA-->
 
     
-        <footer>
-          <div class="pie">
-            <a href="index.html" class="text-dark ">
-              <img alt="logo" src="img/logo.png" width="30px" />
-              <span class="ms-4 h5 font-weight-bold">De Coquitos</span>
-            </a>
-            <small>&copy; Jose Maria Lopez, 2023. All rights reserved.</small>
-            <div class="logowhat">
-              <button class="btn btn-primary btn-lg btn-floating  ">
-                <i class="bi bi-whatsapp"></i>
-              </button>             
-            </div>
-          </div>
-        </footer>
-  
-    
+    <footer>
+        <div class="pie">
+          <a href="index.html" class="text-dark ">
+            <img alt="logo" src="img/logo.png" width="30px" />
+            <span class="ms-4 h5 font-weight-bold">De Coquitos</span>
+          </a>
+          <small>&copy; Jose Maria Lopez, 2023. All rights reserved.</small>
+         
+        </div>
+    </footer>
+
+        
 </body>
-<script src="main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+    
+
 </html>
