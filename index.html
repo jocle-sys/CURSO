@@ -1,84 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Coquitos..</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/css.css">
+	<title>Sitio de peliculas</title>
 </head>
 <body>
-    <!--LOGO-->
+	<!--LOGO-->
     <header>
         <div class="nav flex-column text-center">
             <a href="index.html"><img src="img/logo.png" alt="Logo" width="200" height="125"></a>
-            <h1 class="fuente">DE COQUITOS..</h1>
-            <h2 class="fuente">Diseño y Arte</h2>
-            <h2 class="fuente">Artistica</h2>
+            <h1 class="fuente">VIDEOMANIA</h1>
+            
+            <h3 class="fuente">Mira tu Pelicula</h3>
         </div>
     </header>
 
-     <!--MENU-->
-     <nav class="navbar nav-pills navbar-expand-lg ">
-        <div class="container-fluid">
-          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu ">
-                <li class="nav-item">
-                    <button id="todos" class="nav-link boton-categoria active fuente">TODOS LOS PRODUCTOS</button>
-                </li>
-                <li  class="nav-item">
-                    <button id="baul" class="nav-link boton-categoria fuente">BAULES</button>
-                </li>
-                <li class="nav-item">
-                  <button id="cajas" class="nav-link boton-categoria fuente"> CAJAS</button>
-              </li>
-              <li class="nav-item">
-                <button id="te" class="nav-link boton-categoria fuente"> CAJAS DE TÉ</button>
-              </li>    
-              <li class="nav-item">
-              <a class=" nav-link fuente" href="./carrito.html">
-                  <i class="bi bi-cart-fill"></i> CARRITO<span id="numerito" class="numerito">0</span>
-              </a>
-              </li>         
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
-      <main>
-        <h2 class="titulo-principal" id="titulo-principal">PRODUCTOS</h2>
-        <div id="contenedor-productos" class="contenedor-productos">
-            <!-- Esto se va a rellenar con JS -->
-        </div>
-      </main>
-  
+	<main>
+	<div class="contenedor" id="contenedor"></div>
+	</main>
+
+
+
+<!--PIE DE PAGINA-->
 
     
+<footer>
+	<div class="pie fuente" >
+	  <a href="./carrito.html" class="text-dark ">
+		<img alt="logo" src="img/logo.png" width="30px" />
+		<span class="ms-4 h5 fuente">VIDEOMANIA</span>
+	  </a>
+	  <small>&copy; Jose Maria Lopez, 2023.   All rights reserved.</small>
+	 
+	</div>
+</footer>
 
-    <!--PIE DE PAGINA-->
-
-    
-    <footer>
-        <div class="pie">
-          <a href="index.html" class="text-dark ">
-            <img alt="logo" src="img/logo.png" width="30px" />
-            <span class="ms-4 h5 font-weight-bold">De Coquitos</span>
-          </a>
-          <small>&copy; Jose Maria Lopez, 2023. All rights reserved.</small>
-         
-        </div>
-    </footer>
-
-        
+	
 </body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./js/main.js"></script>
-    
-
+<script src="./js/menu.js"></script>
 </html>
